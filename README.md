@@ -32,6 +32,7 @@ python -m venv venv
 source venv/bin/activate
 pip install torch torchvision matplotlib
 
+
 ## Running the Model
 
 - To train and evaluate the CNN model: python fashion_CNN.py
