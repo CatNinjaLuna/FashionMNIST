@@ -1,56 +1,49 @@
 # DeepFashionNet: CNN for Fashion MNIST Classification
 
-This repository contains the complete implementation and supporting materials for a deep learning project using a Convolutional Neural Network (CNN) to classify images from the Fashion MNIST dataset. This was developed for the CS5330 Computer Vision course at Northeastern University (Fall 2024).
+A PyTorch-based deep learning model built to classify fashion items using the Fashion MNIST dataset. This project was developed for the CS5330 Computer Vision course at Northeastern University (Fall 2024). The model achieves high accuracy with a custom CNN architecture, data augmentation, and early stopping strategies.
 
-## Project Summary
+---
 
-The Fashion MNIST dataset contains 70,000 grayscale images across 10 fashion categories (e.g., shirts, sneakers, dresses). Our goal was to accurately classify these items using a custom-designed deep CNN in PyTorch, supported by data augmentation and regularization.
+## Features
 
-Key features:
-- CNN with 3 convolutional layers, batch normalization, ReLU, max pooling, and dropout
-- Final fully connected layers with softmax activation
-- Data augmentation including random rotations, zoom, and shifts
-- Early stopping and evaluation via accuracy/loss curves and confusion matrix
-- Achieved over 99.4% test accuracy
+### Core Functionalities
+
+- **Image Classification**:  
+  Trained on 70,000 grayscale images across 10 fashion categories (shirts, sneakers, dresses, etc.). Uses a custom-designed CNN with 3 convolutional layers, batch normalization, ReLU, dropout, and max pooling.
+
+- **Data Augmentation**:  
+  Includes random rotation, zoom, and shift to improve generalization.
+
+- **Model Evaluation**:  
+  Supports training/validation loss tracking, accuracy plots, and confusion matrix analysis.
+
+- **High Accuracy**:  
+  Achieved **99.43%** test accuracy and **99.4%** validation accuracy.
+
+---
 
 ## Tech Stack
 
-- Python 3.10
-- PyTorch
-- NumPy, Matplotlib
-- Fashion MNIST Dataset
+- Python 3.10  
+- PyTorch  
+- NumPy, Matplotlib  
+- Fashion MNIST Dataset  
+
+---
 
 ## System Requirements
 
-- MacOS (Apple M1 Pro chip)
-- Visual Studio Code (1.95.1 Universal)
+- macOS (tested on Apple M1 Pro chip)  
+- Visual Studio Code (v1.95.1 Universal)
+
+---
 
 ## Installation
 
 ```bash
+# Create a virtual environment
 python -m venv venv
-source venv/bin/activate
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+# Install required packages
 pip install torch torchvision matplotlib
-
-
-# Running the Model
-
-- To train and evaluate the CNN model: python fashion_CNN.py
-- To visualize data augmentation techniques: python data_augmentation.py
-- To generate result visualizations and confusion matrix: python poster_augmentation.py
-
-# Results
-- Validation Accuracy: Reached 99.4% with minimal gap from training accuracy
-- Loss Trends: Training and validation loss both converged quickly and remained below 1.0 after early epochs
-- Test Accuracy: 99.43% on unseen test set
-- Confusion Matrix: High per-class accuracy, with minor misclassifications (e.g., Pullover vs. Shirt)
-
-# References
-- Fashion MNIST Dataset on Kaggle: https://www.kaggle.com/datasets/zalando-research/fashionmnist
-- PyTorch Beginner Tutorials: https://pytorch.org/tutorials/beginner/basics/intro.html
-- Fashion-MNIST: A Novel Image Dataset for Benchmarking Machine Learning Algorithms – Xiao et al., 2017
-
-# Acknowledgments
-- Special thanks to Professor Bruce Maxwell for his guidance and instruction throughout the CS5330 Computer Vision course at Northeastern University.
-
-
